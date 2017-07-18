@@ -1,0 +1,23 @@
+{
+  "name": "ecrmnn/laravel-https",
+  "description": "Force HTTPS in your Laravel application",
+  "type": "module",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Daniel Eckermann",
+      "email": "danieleckermann@gmail.com"
+    }
+  ],
+  "require": {},
+  "autoload": {
+    "psr-4": {
+      "Ecrmnn\\LaravelHttps\\": "src/"
+    }
+  },
+  "minimum-stability": "stable",
+  "require-dev": {
+    "phpunit/phpunit": "^6.2",
+    "orchestra/testbench": "^3.4"
+  }
+}

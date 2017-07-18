@@ -1,0 +1,18 @@
+root = true
+
+[*]
+charset = utf-8
+end_of_line = lf
+insert_final_newline = true
+trim_trailing_whitespace = true
+end_of_line = lf
+max_line_length = 50
+indent_size = 2
+indent_style = space
+
+[{*.module,*.php,*.php5,*.php4,*.inc,*.ng,*.sht,*.html,*.shtm,*.shtml,*.htm,*.vue}]
+indent_size=4
+
+[{phpunit.xml.dist,*.jhm,*.xslt,*.xul,*.rng,*.xsl,*.xsd,*.ant,*.svg,*.tld,*.fxml,*.jrxml,*.xml,*.jnlp,*.wsdl}]
+indent_style=space
+indent_size=4

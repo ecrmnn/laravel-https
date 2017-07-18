@@ -1,0 +1,10 @@
+.idea
+/.sass-cache
+/vendor
+/node_modules
+Homestead.yaml
+Homestead.json
+.env
+npm-debug.log
+composer.lock
+laravel-https.psd
