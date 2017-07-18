@@ -15,7 +15,12 @@ class ForceHttps
      */
     public function handle($request, Closure $next)
     {
-        if (env('HTTPS') and (!$request->secure() or $_SERVER['HTTP_X_FORWARDED_PROTO'] === 'http')) {
+        if (env('HTTPS') and
+            (
+                !$request->secure() or
+                (isset($_SERVER['HTTP_X_FORWARDED_PROTO']) and $_SERVER['HTTP_X_FORWARDED_PROTO'] === 'http')
+            )
+        ) {
             return redirect()->secure($request->path());
         }
 
