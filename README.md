@@ -16,7 +16,7 @@ composer require ecrmnn/laravel-https
 
 #### Add under ``providers`` in ``config/app.php``
 ```php
-\Ecrmnn\LaravelHttps\Providers\LaravelHttpsServiceProvider::class,
+\Ecrmnn\LaravelHttps\Providers\ServiceProvider::class,
 ```
 
 #### Add under ``$middleware`` in ``app/Http/Kernel.php``
