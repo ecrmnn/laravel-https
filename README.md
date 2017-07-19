@@ -10,34 +10,34 @@ services
 [![](https://img.shields.io/badge/code_style-PSR_2-blue.svg?style=flat-square)](http://www.php-fig.org/psr/psr-2/)
 
 ### Installation 
-#### Add to your project using Composer
+##### Add to your project using Composer
 ```bash
 composer require ecrmnn/laravel-https
 ```
 
-#### Add under ``providers`` in ``config/app.php``
+##### Add under ``providers`` in ``config/app.php``
 ```php
 \Ecrmnn\LaravelHttps\Providers\ServiceProvider::class,
 ```
 
-#### Add under ``$middleware`` in ``app/Http/Kernel.php``
+##### Add under ``$middleware`` in ``app/Http/Kernel.php``
 ```php
 \Ecrmnn\LaravelHttps\Http\Middleware\ForceHttps::class,
 ```
 
 ### Usage
-#### Set environment variable
+##### Set environment variable
 *HTTPS will only be forced when ``env('HTTPS')`` is set to ``true``*
 ```bash
 HTTPS=true
 ```
 
 ### What is this?
-#### Generate HTTPS-links automagically 
+##### Generate HTTPS-links automagically 
 ``LaravelHTTPS`` forces the URL scheme in Laravel to use the HTTPS prefix for all links generated using ``url()`` 
 and ``route()``. That mean that all your links can be converted to use HTTPS just by installing ``LaravelHTTPS``
 
-#### Force redirect HTTP to HTTPS
+##### Force redirect HTTP to HTTPS
 With the middleware included; ``ForceHttps``, you can simply specify that as a global middleware and all requests 
 will be redirected correctly when accessing a non-HTTPS URL.
 
