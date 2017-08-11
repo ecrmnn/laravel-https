@@ -8,13 +8,24 @@ class ServiceProvider extends Provider
 {
     public function boot()
     {
-       //
+        $this->publishes([
+            $this->getConfigPath() => config_path('https.php'),
+        ], 'config');
+
+        if (config('https.force')) {
+            $this->app['url']->forceScheme('https');
+        }
     }
 
     public function register()
     {
-        if (env('HTTPS')) {
-            $this->app['url']->forceScheme('https');
-        }
+        $this->mergeConfigFrom(
+            $this->getConfigPath(), 'https'
+        );
+    }
+
+    private function getConfigPath()
+    {
+        return dirname(__DIR__, 2).'/config/https.php';
     }
 }
