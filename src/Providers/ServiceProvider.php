@@ -19,13 +19,11 @@ class ServiceProvider extends Provider
 
     public function register()
     {
-        $this->mergeConfigFrom(
-            $this->getConfigPath(), 'https'
-        );
+        $this->mergeConfigFrom($this->getConfigPath(), 'https');
     }
 
     private function getConfigPath()
     {
-        return dirname(__DIR__, 2).'/config/https.php';
+        return dirname(__DIR__, 2) . '/config/https.php';
     }
 }
